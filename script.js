@@ -2,7 +2,7 @@ let currentPage = 0;
 const pages = document.querySelectorAll(".page");
 
 function showPage(index) {
-  pages.forEach(page => page.classList.remove("active"));
+  pages.forEach(p => p.classList.remove("active"));
   pages[index].classList.add("active");
 }
 
