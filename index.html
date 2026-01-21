@@ -2,63 +2,154 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Portfólio</title>
+  <title>Portfólio | Estúdio Criativo</title>
 
   <!-- Fonte lettering -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2d6de;
+      color: #111;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 96px;
+      color: white;
+      margin: 0;
+    }
+
+    .hero p {
+      color: #dbe7ee;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    /* SEÇÃO TEXTO */
+    .section {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    /* PROJETOS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .project {
+      background: white;
+      padding: 15px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .project p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
 </head>
+
 <body>
 
-  <div class="book-container">
-
-    <!-- CAPA -->
-    <div class="page active cover">
+  <!-- HERO -->
+  <section class="hero">
+    <div>
       <h1>Portfólio</h1>
+      <p>Criação de conteúdo para redes sociais</p>
     </div>
+  </section>
 
-    <!-- LIVRO ABERTO – TEXTO -->
-    <div class="page spread">
+  <!-- APRESENTAÇÃO -->
+  <section class="section">
+    <h2>Criar conteúdo não deveria ser complicado.</h2>
 
-      <div class="paper left">
-        <h2>Criar conteúdo<br>não deveria ser complicado.</h2>
+    <p>
+      Você já cansou de pagar valores altos por posts bonitos que não trazem resultado?<br>
+      Fica sem ideias do que postar?<br>
+      Sente que seu Instagram não representa sua marca?
+    </p>
 
-        <p>
-          Você já cansou de pagar valores altos por posts bonitos?<br><br>
-          Está sem ideias do que postar nas redes sociais?<br><br>
-          Sente que seu Instagram não representa sua marca?
-        </p>
+    <p>
+      Somos um estúdio focado na criação de conteúdo estratégico para redes sociais.
+      Criamos posts criativos, alinhados à identidade da sua marca e pensados para gerar resultado.
+    </p>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="section">
+    <h2>Alguns projetos</h2>
+
+    <div class="projects">
+      <div class="project">
+        <img src="images/projeto1.jpg" alt="Projeto 1">
+        <p>Post para Instagram – Feed</p>
       </div>
 
-      <div class="paper right">
-        <p>
-          Somos um estúdio focado na criação de conteúdo para redes sociais.<br><br>
-          Criamos posts estratégicos, criativos e alinhados à identidade da sua marca.<br><br>
-          Neste caderno, você vai conhecer alguns dos nossos trabalhos.
-        </p>
+      <div class="project">
+        <img src="images/projeto2.jpg" alt="Projeto 2">
+        <p>Post para Instagram – Carrossel</p>
       </div>
 
+      <div class="project">
+        <img src="images/projeto3.jpg" alt="Projeto 3">
+        <p>Identidade visual + conteúdo</p>
+      </div>
     </div>
+  </section>
 
-    <!-- PROJETO 1 -->
-    <div class="page spread">
-      <div class="paper left">
-        <img src="projeto1.jpg.jpg">
-      </div>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 — Estúdio de Criação de Conteúdo  
+  </footer>
 
-      <div class="paper right">
-        <img src="projeto2.jpg.jpg">
-      </div>
-    </div>
-
-  </div>
-
-  <div class="controls">
-    <button onclick="prevPage()">Anterior</button>
-    <button onclick="nextPage()">Próxima</button>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
